@@ -12,23 +12,17 @@ namespace TestimDetyra.TestScenarios.PlayListFunctionalityYoutube
         public void SetUpBeforeEachTest()
         {
             Action.InitializeDriver(Config.YoutubeConfig.Url);
-            //Driver.driver.FindElement(By.ClassName("yt-spec-touch-feedback-shape")).Click();
-            //Driver.driver.FindElement(By.Id("identifierId")).SendKeys(Config.YoutubeConfig.Email);
-            //Driver.driver.FindElement(By.ClassName("VfPpkd-LgbsSe")).Click();
-            //Driver.driver.FindElement(By.ClassName("whsOnd")).SendKeys(Config.YoutubeConfig.Password);
-            //Driver.driver.FindElement(By.ClassName("VfPpkd-LgbsSe")).Click();
-
         }
 
-        //[TearDown]
-        //public void AfterEachTest()
-        //{
-        //    if (TestContext.CurrentContext.Result.Outcome != ResultState.Success)
-        //    {
-        //        Action.MakeScreenshot(TestContext.CurrentContext.Test.Name);
-        //    }
-        //    Driver.driver.Quit();
-        //}
+        [TearDown]
+        public void AfterEachTest()
+        {
+            if (TestContext.CurrentContext.Result.Outcome != ResultState.Success)
+            {
+                Action.MakeScreenshot(TestContext.CurrentContext.Test.Name);
+            }
+            Driver.driver.Quit();
+        }
 
         [Test]
         public void SaveVideoToNewPlaylist()

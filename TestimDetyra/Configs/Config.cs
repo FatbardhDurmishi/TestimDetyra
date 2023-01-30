@@ -27,5 +27,19 @@ namespace TestimDetyra.Configs
             public static string AddedSuccessfully = "Added to test";
 
         }
+
+        public static class KosovaJobMultiLanguageConfig
+        {
+            public static string Url = "https://kosovajob.com/";
+            public static string Profile = "MY PROFILE";
+            public static string Search = "SEARCH";
+            public static string Contact = "CONTACT";
+            public static string Products = "PRODUCTS";
+
+            public static string Profili = "PROFILI IM";
+            public static string Kerko = "KËRKO";
+            public static string Kontakt = "KONTAKT";
+            public static string Produktet = "PRODUKTET";
+        }
     }
 }
