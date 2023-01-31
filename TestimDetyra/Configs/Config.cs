@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.WebRequestMethods;
 
 namespace TestimDetyra.Configs
 {
@@ -40,6 +42,28 @@ namespace TestimDetyra.Configs
             public static string Kerko = "KËRKO";
             public static string Kontakt = "KONTAKT";
             public static string Produktet = "PRODUKTET";
+        }
+
+        public static class GmailConfing
+        {
+            public static string Url = "https://mail.google.com/mail/u/0/#inbox";
+            public static string Receiver = "fd200043k@riinvest.net";
+            public static string Subject = "Test";
+            public static string Body = "Test";
+            public static string MessageSent = "Message sent";
+            public static string AddressNotFount = "Address not found";
+            public static string InvalidEmail = "hjvytcyv@gmail.com";
+            public static string EmailScheduledMessage = "Send scheduled for ";
+        }
+
+        public static class GitConfig
+        {
+            public static string Url = "https://github.com/";
+            public static string RepositoryName = "TestRepo2";
+            public static string AfterRepoCreatedUrl = "https://github.com/FatbardhDurmishi/" + RepositoryName;
+            public static string Password = "Bardhigit1";
+            public static string Private = "Private";
+            public static string Collaborator = "Bulza Rexhepi";
         }
     }
 }
