@@ -66,12 +66,12 @@ namespace TestimDetyra.TestScenarios.Git
             Thread.Sleep(100);
             Driver.driver.FindElement(By.ClassName("js-repo-visibility-proceed-button")).Click();
             Thread.Sleep(3000);
-            if(Driver.driver.Url == $"https://github.com/FatbardhDurmishi/{repoName}/settings/set_visibility")
+            if (Driver.driver.Url == $"https://github.com/FatbardhDurmishi/{repoName}/settings/set_visibility")
             {
                 Driver.driver.FindElement(By.Name("sudo_password")).SendKeys(Config.GitConfig.Password);
                 Driver.driver.FindElement(By.ClassName("btn-primary")).Click();
             }
-          
+
             var repoVisibility = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div[5]/div/main/div/div[1]/div/div/span[4]")).Text;
             Assert.AreEqual(repoVisibility.Trim(), Config.GitConfig.Private);
 
@@ -86,12 +86,21 @@ namespace TestimDetyra.TestScenarios.Git
             Driver.driver.FindElement(By.CssSelector("body > div.logged-in.env-production.page-responsive.full-width > div.position-relative.js-header-wrapper > header > div.Header-item.position-relative.mr-0.d-none.d-md-flex > details > details-menu > a:nth-child(6)")).Click();
             Thread.Sleep(3000);
             Driver.driver.FindElement(By.XPath("/html/body/div[1]/div[5]/main/div[2]/div/div[2]/turbo-frame/div/div[2]/ul/li[1]/div[1]/div[1]/h3/a")).Click();
-            Thread.Sleep(1000);
+            Thread.Sleep(3000);
             Driver.driver.FindElement(By.Id("settings-tab")).Click();
             Thread.Sleep(2000);
             Driver.driver.FindElement(By.XPath("/html/body/div[1]/div[5]/div/main/turbo-frame/div/div/div[1]/div/ul/li[3]/nav-list/ul/li[2]/ul/li[1]/a")).Click();
             Thread.Sleep(3000);
-            Driver.driver.FindElement(By.XPath("/html/body/div[1]/div[5]/div/main/turbo-frame/div/div/div[2]/div/div/div[4]/details/summary")).Click();
+            var collabs = Driver.driver.FindElements(By.ClassName("adminable")).Count();
+            if (collabs > 0)
+            {
+                Driver.driver.FindElement(By.XPath("/html/body/div[1]/div[5]/div/main/turbo-frame/div/div/div[2]/div/div/div[3]/div[2]/details/summary")).Click();
+            }
+            else
+            {
+                Driver.driver.FindElement(By.XPath("/html/body/div[1]/div[5]/div/main/turbo-frame/div/div/div[2]/div/div/div[4]/details/summary")).Click();
+            }
+
             Thread.Sleep(2000);
             Driver.driver.FindElement(By.ClassName("js-repo-add-access-search-input")).SendKeys(Config.GitConfig.Collaborator);
             Thread.Sleep(1000);
