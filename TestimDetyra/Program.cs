@@ -10,6 +10,8 @@ namespace TestimDetyra
     {
         static void Main(string[] args)
         {
+
+
         }
     }
 }

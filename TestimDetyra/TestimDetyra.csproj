@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configs\Action.cs" />
+    <Compile Include="Configs\AlertMessages.cs" />
     <Compile Include="Configs\Config.cs" />
     <Compile Include="Configs\Driver.cs" />
     <Compile Include="Program.cs" />
@@ -65,6 +66,11 @@
     <Compile Include="TestScenarios\KosovaJobFiltering\Filtering.cs" />
     <Compile Include="TestScenarios\KosovaJobMultiLanguage\MultiLanguage.cs" />
     <Compile Include="TestScenarios\PlayListFunctionalityYoutube\SaveVideoToPlaylist.cs" />
+    <Compile Include="TestScenarios\Spotifyy\LikedSongs.cs" />
+    <Compile Include="TestScenarios\Trello\InvitePeople.cs" />
+    <Compile Include="TestScenarios\Trello\TrelloCards.cs" />
+    <Compile Include="TestScenarios\Udemy Learning Curve\LearningProgress.cs" />
+    <Compile Include="TestScenarios\Udemy Shopping Card\ShopingCard.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

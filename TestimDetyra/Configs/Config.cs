@@ -41,5 +41,26 @@ namespace TestimDetyra.Configs
             public static string Kontakt = "KONTAKT";
             public static string Produktet = "PRODUKTET";
         }
+
+        public static class SpotifyLikedSongsConfig
+        {
+            public static string Url = "https://open.spotify.com";
+            public static string RandomPlaylist = "//*[@id=\"main\"]/div/div[2]/div[3]/div[1]/div[2]/div[2]/div/div/div[2]/main/section/div/div/section[1]/div[2]/div[2]/div";
+        }
+
+
+        public static class Udemy
+        {
+            public static string Url = "https://www.udemy.com";
+            public static string cartURL = "https://www.udemy.com/cart/";
+            public static string learningPathUrl = "https://www.udemy.com/home/my-courses/learning/";
+            public static string RandomPlaylist = "//*[@id=\"main\"]/div/div[2]/div[3]/div[1]/div[2]/div[2]/div/div/div[2]/main/section/div/div/section[1]/div[2]/div[2]/div";
+            public static string MostPopularCourseNumber1Xpath = "//*[@id=\"course-unit-container-Mostpopular\"]/div[1]";
+        }
+
+        public static class Trello
+        {
+            public static string Url = "https://www.trello.com";
+        }
     }
 }

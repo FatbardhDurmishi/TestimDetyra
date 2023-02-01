@@ -14,12 +14,32 @@ namespace TestimDetyra.Configs
         {
             var userDataDir = @"C:\Users\fatba\AppData\Local\Google\Chrome\User Data";
 
-            ChromeOptions options = new ChromeOptions();
-            options.AddArgument($"--user-data-dir={userDataDir}");
+
+            var pcName = System.Environment.MachineName;
+
+            if (pcName.Equals("DESKTOP-A4SICL1"))
+            {
+                string rilindChromeProfile = "Profile 1";
+                var rilindDataDir = @"C:\Users\rilind32\AppData\Local\Google\Chrome\User Data";
+
+                ChromeOptions options = new ChromeOptions();
+                options.AddArgument($"--user-data-dir={rilindDataDir}");
+                options.AddArgument($"--profile-directory={rilindChromeProfile}");
+
+                Driver.driver = new ChromeDriver(options);
+
+            }
+            else
+            {
+                ChromeOptions options = new ChromeOptions();
+                options.AddArgument($"--user-data-dir={userDataDir}");
+                Driver.driver = new ChromeDriver(options);
+
+            }
+
             //options.AddArgument("--no-sandbox"); // Bypass OS security model
             //options.AddArgument("--disable-dev-shm-usage"); // overcome limited resource problems
             //options.AddArgument("--headless");
-            Driver.driver = new ChromeDriver(options);
 
 
             Driver.driver.Manage().Window.Maximize();
