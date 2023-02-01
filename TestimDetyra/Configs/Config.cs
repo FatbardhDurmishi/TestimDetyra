@@ -65,5 +65,38 @@ namespace TestimDetyra.Configs
             public static string Private = "Private";
             public static string Collaborator = "Bulza Rexhepi";
         }
+
+        public static class GjirafaConfig
+        {
+            public static string GjirafaUrl = "https://gjirafa50.com/";
+            public static string Name = "Filan";
+            public static string Surname = "Fisteku";
+            public static string Tel = "044111222";
+            public static string Address = "Test";
+            public static string Email = "test@gmail.com";
+            public static string Confirm = "Urime! Porosia juaj është kryer me sukses.";
+        }
+        public static class HelpDeskConfig
+        {
+            public static string HelpDeskUrl = "https://helpdesk.riinvest.net/";
+            public static string fullName = "Bulza";
+            public static string email = "br200036k@riinvest.net";
+            public static string statement = "test per lenden Testim i Softuerit";
+            public static string confirmationCreate = "Support ticket request created";
+            public static string confirmationStatus = "Bulza - access link sent to your email!";
+            public static string ticketNum = "376280";
+        }
+
+        public static class InstagramConfig
+        {
+            public static string InstagramUrl = "https://www.instagram.com";
+            public static string username = "bulza.rexhepi02";
+            public static string password = "Testim1";
+            public static string newPassword = "Testim9";
+            public static string personToChat = "bulzaarexhepii";
+            public static string personGroup = "albaarexhepii";
+            public static string chatMessage = "Test Chat";
+            public static string groupMessage = "Test Group";
+        }
     }
 }
