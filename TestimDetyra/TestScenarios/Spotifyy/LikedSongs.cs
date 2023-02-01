@@ -31,8 +31,6 @@ namespace TestimDetyra.TestScenarios.Spotifyy
         [Test]
         public void LikeNewSong()
         {
-            Driver.driver.FindElement(By.XPath(Config.SpotifyLikedSongsConfig.RandomPlaylist)).Click();
-            Thread.Sleep(1000);
 
             //IReadOnlyCollection<IWebElement> resultContainer = Driver.driver.FindElements(By.ClassName("LunqxlFIupJw_Dkx6mNx"));
             //IWebElement element = resultContainer.ElementAt(0);
@@ -40,14 +38,24 @@ namespace TestimDetyra.TestScenarios.Spotifyy
             //Thread.Sleep(2000);
 
 
-            IReadOnlyCollection<IWebElement> resultContainer = Driver.driver.FindElements(By.ClassName("vnCew8qzJq3cVGlYFXRI"));
-            IWebElement element = resultContainer.ElementAt(0);
-            element.Click();
+            //IReadOnlyCollection<IWebElement> resultContainer = Driver.driver.FindElements(By.ClassName("vnCew8qzJq3cVGlYFXRI"));
+            //IWebElement element = resultContainer.ElementAt(0);
+            //element.Click();
+
+            Thread.Sleep(7000);
+            Driver.driver.FindElement(By.XPath("//*[@id=\"main\"]/div/div[2]/div[3]/div[1]/div[2]/div[2]/div/div/div[2]/main/section/div/div/section[2]/div[2]/div[1]/div")).Click();
+            Thread.Sleep(7000);
+
+            Driver.driver.FindElement(By.XPath("//*[@id=\"main\"]/div/div[2]/div[3]/div[1]/div[2]/div[2]/div/div/div[2]/main/div/section/div[2]/div[3]/div/div[2]/div[2]/div[1]/div/div[5]/button[1]")).Click();
+            Thread.Sleep(7000);
+
+            Driver.driver.FindElement(By.XPath("//*[@id=\"main\"]/div/div[2]/nav/div[1]/div[2]/div/div[2]/a")).Click();
             Thread.Sleep(2000);
 
-            
+            var topOfListOfLikedSongs = Driver.driver.FindElement(By.XPath("//*[@id=\"main\"]/div/div[2]/div[3]/div[1]/div[2]/div[2]/div/div/div[2]/main/section/div[4]/div/div[2]/div[2]/div[1]/div/div[2]/div/a/div"));
 
 
+            Assert.AreEqual("Cinnamon Girl", topOfListOfLikedSongs.Text);
         }
     }
 }
